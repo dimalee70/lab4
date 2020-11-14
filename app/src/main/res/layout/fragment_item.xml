@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="@dimen/width_0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Hard Kill" />
+
+    <TextView
+        android:id="@+id/desc_tv"
+        android:layout_width="@dimen/width_0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Hard Kill" />
+
+    <TextView
+        android:id="@+id/status_tv"
+        android:layout_width="@dimen/width_0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Hard Kill" />
+
+    <TextView
+        android:id="@+id/category_tv"
+        android:layout_width="@dimen/width_0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Hard Kill" />
+
+    <TextView
+        android:id="@+id/dur_tv"
+        android:layout_width="@dimen/width_0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Hard Kill" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

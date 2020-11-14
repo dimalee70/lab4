@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdkVersion Config.compileSdk
+    buildToolsVersion Config.buildTools
+
+    defaultConfig {
+        applicationId "kz.lab4"
+        minSdkVersion Config.minSdk
+        targetSdkVersion Config.targetSdk
+        versionCode Config.versionCode
+        versionName Config.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    implementation Deps.tools_kotlin_stdlib
+    implementation Deps.androidx_core
+    implementation Deps.androidx_appcompat
+    implementation Deps.material
+
+    // Navigation
+    implementation Deps.navigation_fragment
+    implementation Deps.navigation_ui
+
+    // Glide
+    kapt Deps.glide_compiler
+    implementation Deps.glide
+
+    //Groupie
+    implementation Deps.groupie
+    implementation Deps.groupie_viewbinding
+
+    // Coroutines
+    implementation Deps.coroutines_core
+    implementation Deps.androidx_coroutines
+    testImplementation Deps.coroutines_core
+    testImplementation Deps.androidx_coroutines
+
+    // Constraint layout
+    implementation Deps.androidx_constraint
+
+    //Room
+    implementation Deps.room_runtime
+    implementation Deps.room_ktx
+    kapt Deps.room_compiler
+
+    // Timber
+    implementation Deps.timber
+
+    //Koin
+    implementation Deps.androidx_koin
+    implementation Deps.koin_scope
+    implementation Deps.koin_viewmodel
+    testImplementation Deps.koin_test
+
+    //Swipe Refresh
+    implementation Deps.swiperefreshlayout
+
+//    LiveEvent
+    implementation Deps.live_event
+
+    testImplementation Deps.testlib_junit
+    androidTestImplementation Deps.testext_junit
+    androidTestImplementation Deps.testandroidx_espressocore
+}
